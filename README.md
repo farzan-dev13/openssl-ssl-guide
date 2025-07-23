@@ -21,6 +21,8 @@ _A hands-on tutorial on creating private keys, public keys, CSRs, and certificat
 
 ## Generating a Private Key
 
+--
+
 To generate a 2048‑bit RSA private key, run:
 
 ```bash
@@ -38,4 +40,4 @@ This will create a file named `private.key` in your current directory.
 
 ![Generated private key file](images/private.png)
 
-⚠️ Note: The private key shown above is just an example. Each openssl genpkey … invocation generates a unique key—please run the command yourself to produce your own private key.
+⚠️ Note: The private key shown above is just an example. Each `openssl genpkey …` invocation generates a unique key—please run the command yourself to produce your own private key.
