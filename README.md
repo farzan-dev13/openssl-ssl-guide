@@ -2,6 +2,12 @@
 
 _A hands-on tutorial on creating private keys, public keys, CSRs, and certificates using OpenSSL._
 
+
+
+![Tutorial Banner](images/banner.png)
+
+
+
 ## Table of Contents
 
 
