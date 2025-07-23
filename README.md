@@ -94,7 +94,6 @@ You’ll be prompted to enter:
 
 ![Generated Certificate Signing Request (request.csr)](images/request_csr.png)
 
-
 ---
 
 ## Self‑Signing a Certificate
@@ -117,5 +116,26 @@ x509 -req: indicates you’re processing a CSR request
 
 # This command generates certificate.crt, a PEM‑encoded self‑signed certificate valid for 1 year.
 
-
 ![Self‑signed certificate output](images/certificate-output.png)
+
+---
+
+## Verifying Key, CSR, and Certificate Match
+
+To ensure that your RSA private key, CSR, and certificate all align, you can compare their modulus values:
+
+```bash
+# 1. Check private key modulus
+openssl rsa -in private.key -noout -modulus
+
+# 2. Check CSR modulus
+openssl req -in request.csr -noout -modulus
+
+# 3. Check certificate modulus
+openssl x509 -in certificate.crt -noout -modulus
+
+```
+
+### Each command should output the same hexadecimal string. If they match, your files are correctly paired.
+
+![Modulus match output](images/modulus-match.png)
