@@ -93,3 +93,29 @@ You’ll be prompted to enter:
 - This creates request.csr containing your CSR in PEM format.
 
 ![Generated Certificate Signing Request (request.csr)](images/request_csr.png)
+
+
+---
+
+## Self‑Signing a Certificate
+
+To create a self‑signed certificate using your CSR and private key, run:
+
+```bash
+openssl x509 -req -in request.csr -signkey private.key -out certificate.crt -days 365
+```
+
+x509 -req: indicates you’re processing a CSR request
+
+- in request.csr: specifies the CSR file as input
+
+- signkey private.key: uses your private key to sign the certificate
+
+- out certificate.crt: the output filename for your certificate
+
+- days 365: the certificate validity period in days
+
+# This command generates certificate.crt, a PEM‑encoded self‑signed certificate valid for 1 year.
+
+
+![Self‑signed certificate output](images/certificate-output.png)
