@@ -4,15 +4,27 @@ _A hands-on tutorial on creating private keys, public keys, CSRs, and certificat
 
 ## Table of Contents
 
-1. [Prerequisites](#prerequisites)
-2. [Generating a Private Key](#generating-a-private-key)
-3. [Extracting the Public Key](#extracting-the-public-key)
-4. [Creating a CSR (Certificate Signing Request)](#creating-a-csr-certificate-signing-request)
-5. [Self-Signing a Certificate](#self-signing-a-certificate)
-6. [Verifying Key, CSR, and Certificate Match](#verifying-key-csr-and-certificate-match)
-7. [Next Steps: Deploying with Nginx/Apache](#next-steps-deploying-with-nginxapache)
+
+## Table of Contents
+1. [About OpenSSL](#about-openssl)
+2. [Prerequisites](#prerequisites)
+3. [Generating a Private Key](#generating-a-private-key)
+4. [Extracting the Public Key](#extracting-the-public-key)
+5. [Creating a CSR (Certificate Signing Request)](#creating-a-csr-certificate-signing-request)
+6. [Self-Signing a Certificate](#self-signing-a-certificate)
+7. [Verifying Key, CSR, and Certificate Match](#verifying-key-csr-and-certificate-match)
 8. [License](#license)
 
+---
+
+## About OpenSSL
+
+OpenSSL is a widely used open‑source toolkit that implements the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols, as well as a full‑featured cryptography library. It is the de facto industry standard, powering most HTTPS websites, email servers, VPNs, and many other security‑sensitive applications worldwide.
+
+
+
+
+---
 ## Prerequisites
 
 - OpenSSL installed (version X.X.X or newer)
@@ -139,3 +151,14 @@ openssl x509 -in certificate.crt -noout -modulus
 ### Each command should output the same hexadecimal string. If they match, your files are correctly paired.
 
 ![Modulus match output](images/modulus-match.png)
+
+
+---
+
+> 🎓 **Note:** All keys shown in the images have been generated solely for educational and demonstration purposes and have never been used on any server. To create and use your own keys, run the OpenSSL commands on your own system and avoid sharing your private keys or screenshots to prevent exposure of sensitive information or potential interception.
+
+---
+> 🚀 **Tip:** Always generate and manage your own keys in a secure environment—never rely on untrusted sources or share demo keys in production. This guide’s purpose is to show you how to use trustworthy OpenSSL commands to create strong, reliable keys.
+---
+
+
