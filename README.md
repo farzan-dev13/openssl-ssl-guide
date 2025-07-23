@@ -8,7 +8,7 @@ _A hands-on tutorial on creating private keys, public keys, CSRs, and certificat
 2. [Generating a Private Key](#generating-a-private-key)
 3. [Extracting the Public Key](#extracting-the-public-key)
 4. [Creating a CSR (Certificate Signing Request)](#creating-a-csr-certificate-signing-request)
-5. [Self‑Signing a Certificate](#self‑signing-a-certificate)
+5. [Self-Signing a Certificate](#self-signing-a-certificate)
 6. [Verifying Key, CSR, and Certificate Match](#verifying-key-csr-and-certificate-match)
 7. [Next Steps: Deploying with Nginx/Apache](#next-steps-deploying-with-nginxapache)
 8. [License](#license)
@@ -96,7 +96,7 @@ You’ll be prompted to enter:
 
 ---
 
-## Self‑Signing a Certificate
+## Self-Signing a Certificate
 
 To create a self‑signed certificate using your CSR and private key, run:
 
