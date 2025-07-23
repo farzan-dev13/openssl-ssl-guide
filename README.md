@@ -3,6 +3,7 @@
 _A hands-on tutorial on creating private keys, public keys, CSRs, and certificates using OpenSSL._
 
 ## Table of Contents
+
 1. [Prerequisites](#prerequisites)
 2. [Generating a Private Key](#generating-a-private-key)
 3. [Extracting the Public Key](#extracting-the-public-key)
@@ -13,11 +14,10 @@ _A hands-on tutorial on creating private keys, public keys, CSRs, and certificat
 8. [License](#license)
 
 ## Prerequisites
+
 - OpenSSL installed (version X.X.X or newer)
 - Basic familiarity with the terminal/shell
 - A UNIX‑like environment (Linux, macOS, or WSL on Windows)
-
-
 
 ## Generating a Private Key
 
@@ -27,13 +27,15 @@ To generate a 2048‑bit RSA private key, run:
 openssl genpkey -algorithm RSA -out private.key -pkeyopt rsa_keygen_bits:2048
 ```
 
-- `genpkey`: the OpenSSL subcommand for key generation  
-- `-algorithm RSA`: specifies the RSA algorithm  
-- `-out private.key`: the output filename  
-- `-pkeyopt rsa_keygen_bits:2048`: key size in bits  
+- `genpkey`: the OpenSSL subcommand for key generation
+- `-algorithm RSA`: specifies the RSA algorithm
+- `-out private.key`: the output filename
+- `-pkeyopt rsa_keygen_bits:2048`: key size in bits
 
 This will create a file named `private.key` in your current directory.
 
 ![Output of openssl genpkey on Windows](images/genpkey-output.png)
 
 ![Generated private key file](images/private.png)
+
+⚠️ Note: The private key shown above is just an example. Each openssl genpkey … invocation generates a unique key—please run the command yourself to produce your own private key.
