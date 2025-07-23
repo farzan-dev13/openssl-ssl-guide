@@ -92,4 +92,4 @@ You’ll be prompted to enter:
 
 - This creates request.csr containing your CSR in PEM format.
 
-![Generated Certificate Signing Request (request.csr)](images/request.png)
+![Generated Certificate Signing Request (request.csr)](images/request_csr.png)
