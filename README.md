@@ -41,3 +41,25 @@ This will create a file named `private.key` in your current directory.
 ![Generated private key file](images/private.png)
 
 ⚠️ Note: The private key shown above is just an example. Each `openssl genpkey …` invocation generates a unique key—please run the command yourself to produce your own private key.
+
+---
+
+## Extracting the Public Key
+
+Once you have your private key, you can extract the corresponding public key with:
+
+```bash
+openssl pkey -in private.key -pubout -out public.key
+```
+
+- `pkey`: the OpenSSL subcommand for public/private key processing
+
+- `-in` private.key: specifies your private key file as input
+
+- `pubout`: tells OpenSSL to output the public key
+
+- `out` public.key: the filename to write the public key to
+
+This command will generate a file named public.key containing your PEM‑encoded public key.
+
+![Generated public key file](images/public.png)
