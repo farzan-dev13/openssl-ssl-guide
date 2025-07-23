@@ -17,4 +17,19 @@ _A hands-on tutorial on creating private keys, public keys, CSRs, and certificat
 - Basic familiarity with the terminal/shell
 - A UNIX‑like environment (Linux, macOS, or WSL on Windows)
 
-<!-- continue -->
+
+
+## Generating a Private Key
+
+To generate a 2048‑bit RSA private key, run:
+
+```bash
+openssl genpkey -algorithm RSA -out private.key -pkeyopt rsa_keygen_bits:2048
+```
+
+- `genpkey`: the OpenSSL subcommand for key generation  
+- `-algorithm RSA`: specifies the RSA algorithm  
+- `-out private.key`: the output filename  
+- `-pkeyopt rsa_keygen_bits:2048`: key size in bits  
+
+This will create a file named `private.key` in your current directory.
