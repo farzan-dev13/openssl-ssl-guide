@@ -33,3 +33,7 @@ openssl genpkey -algorithm RSA -out private.key -pkeyopt rsa_keygen_bits:2048
 - `-pkeyopt rsa_keygen_bits:2048`: key size in bits  
 
 This will create a file named `private.key` in your current directory.
+
+![Output of openssl genpkey on Windows](images/genpkey-output.png)
+
+![Generated private key file](images/private.png)
