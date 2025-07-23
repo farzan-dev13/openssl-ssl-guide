@@ -63,3 +63,33 @@ openssl pkey -in private.key -pubout -out public.key
 This command will generate a file named public.key containing your PEM‑encoded public key.
 
 ![Generated public key file](images/public.png)
+
+---
+
+## Creating a CSR (Certificate Signing Request)
+
+To generate a CSR using your private key, run:
+
+```bash
+openssl req -new -key private.key -out request.csr
+```
+
+You’ll be prompted to enter:
+
+- Country Name (2 letter code): e.g., US
+
+- State or Province Name: e.g., California
+
+- Locality Name (city): e.g., San Francisco
+
+- Organization Name: e.g., FARZAN GIT Corp
+
+- Organizational Unit Name: e.g., IT Department
+
+- Common Name (domain name): e.g., www.example.com
+
+- Email Address: e.g., admin@example.com
+
+- This creates request.csr containing your CSR in PEM format.
+
+![Generated Certificate Signing Request (request.csr)](images/request.png)
